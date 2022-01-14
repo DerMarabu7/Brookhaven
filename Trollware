@@ -1,7 +1,16 @@
+Heckerman = {
+    SchemeColor = Color3.fromRGB(0, 77, 0),
+    Background = Color3.fromRGB(0, 0, 0),
+    Header = Color3.fromRGB(0, 0, 0),
+    TextColor = Color3.fromRGB(255,255,255),
+    ElementColor = Color3.fromRGB(20, 20, 20)
+}
+local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
+local Notify = AkaliNotif.Notify;
 local TargetName = "";
 getgenv().ScaryName = false;
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Trollware", "DarkTheme")
+local Window = Library.CreateLib("Trollware", Heckerman)
 local Outfits = Window:NewTab("Outfits")
 local OutfitsSec = Outfits:NewSection("Outfits")
 local Heads = Window:NewTab("Heads")
@@ -16,6 +25,11 @@ local ExtrasSec = Extras:NewSection("Extras")
 OutfitsSec:NewButton("Reset Outfit", "Resets you to your Roblox Outfit", function()
 wait(0.5)
 game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+Notify({
+    Description = "Succesfully changed to normal roblox outfit";
+    Title = "Trollware";
+    Duration = 3;
+    });
 end)
 
 OutfitsSec:NewButton("Brollge", "YEE", function()
@@ -27,6 +41,11 @@ wait(0.5)
 game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6711806832)
 wait(0.5)
 game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",215718515)
+Notify({
+    Description = "Succesfully changed to Brollge";
+    Title = "Trollware";
+    Duration = 3;
+    });
 end)
 
 OutfitsSec:NewButton("AugenKopf", "YEE", function()
@@ -36,6 +55,11 @@ game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("w
 wait(0.5)
 game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6773734422)
 wait(0.5)
+Notify({
+    Description = "Succesfully changed to AugenKopf";
+    Title = "Trollware";
+    Duration = 3;
+    });
 end)
 
 OutfitsSec:NewButton("Ghost Deer", "YEE", function()
@@ -48,6 +72,11 @@ wait(0.5)
 game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",183468963)
 wait(0.5)
 game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",74891470)
+Notify({
+    Description = "Succesfully changed to Ghost Deer";
+    Title = "Trollware";
+    Duration = 3;
+    });
 end)
 
 OutfitsSec:NewButton("Bodybuilder", "YEETTTTTTTTTTTTTTTTTT", function()
@@ -57,7 +86,12 @@ OutfitsSec:NewButton("Bodybuilder", "YEETTTTTTTTTTTTTTTTTT", function()
     wait(0.5)
     game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",7484664247)
     wait(0.5)
-    end)
+    Notify({
+        Description = "Succesfully changed to Bodybuilder";
+        Title = "Trollware";
+        Duration = 3;
+        });
+end)
 
 OutfitsSec:NewButton("Poison", "YEETTTTTTTTTTTTTTTTTT", function()
 game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("skintone","Really black")
@@ -69,7 +103,31 @@ wait(0.5)
 game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6352235893)
 wait(0.5)
 game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",7084297385)
+Notify({
+    Description = "Succesfully changed to Poison";
+    Title = "Trollware";
+    Duration = 3;
+    });
 end)
+
+
+OutfitsSec:NewButton(":)))))))))))", "YEETTTTTTTTTTTTTTTTTT", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("skintone","Really black")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6679358935)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6462510191)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6239895731)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",7667210031)
+    Notify({
+        Description = "Succesfully changed to :)))))))))))";
+        Title = "Trollware";
+        Duration = 3;
+        });
+    end)
+
 
 PlayerSec:NewToggle("ScaryName", "YE", function(state)
     if state then
@@ -99,104 +157,22 @@ game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("w
 wait(0.5)
 game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",1744060292)
 end)
-local TargetName = "";
-getgenv().ScaryName = false;
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Trollware", "DarkTheme")
-local Outfits = Window:NewTab("Outfits")
-local OutfitsSec = Outfits:NewSection("Outfits")
-local Heads = Window:NewTab("Heads")
-local HeadsSec = Heads:NewSection("Heads")
-local Player = Window:NewTab("Player")
-local PlayerSec = Player:NewSection("Player")
-local Misc = Window:NewTab("Misc")
-local MiscSec = Misc:NewSection("Misc")
-local Extras = Window:NewTab("Extras")
-local ExtrasSec = Extras:NewSection("Extras")
 
-OutfitsSec:NewButton("Reset Outfit", "Resets you to your Roblox Outfit", function()
+HeadsSec:NewButton("Mr. Bling Bling", "Bobux dikka", function()
 wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6443423649)
 end)
 
-OutfitsSec:NewButton("Brollge", "YEE", function()
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6725974421)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6725973991)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6711806832)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",215718515)
+ExtrasSec:NewKeybind("Toggle UI", "Toggles Ui Visibility", Enum.KeyCode.LeftControl, function()
+	Library:ToggleUI()
 end)
 
-OutfitsSec:NewButton("AugenKopf", "YEE", function()
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("skintone", "Dark nougat")
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6135767720)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6773734422)
-wait(0.5)
-end)
-
-OutfitsSec:NewButton("Ghost Deer", "YEE", function()
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("skintone", "Really black")
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6352235893)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",7084297385)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",183468963)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",74891470)
-end)
-
-OutfitsSec:NewButton("Bodybuilder", "YEETTTTTTTTTTTTTTTTTT", function()
-    game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("skintone","Light orange")
+MiscSec:NewButton("Equip/Unequip trollware banner", "YEE", function()
     wait(0.5)
-    game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",7097631761)
-    wait(0.5)
-    game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",7484664247)
-    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",4739738574)
+    Notify({
+        Description = "Succesfully equipped/unequipped Trollware Banner!";
+        Title = "Trollware";
+        Duration = 3;
+        });
     end)
-
-OutfitsSec:NewButton("Poison", "YEETTTTTTTTTTTTTTTTTT", function()
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("skintone","Really black")
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",64444871)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",1744060292)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6352235893)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",7084297385)
-end)
-
-PlayerSec:NewToggle("ScaryName", "YE", function(state)
-    if state then
-        getgenv().ScaryName = true;
-    else
-        getgenv().ScaryName = false;
-    end
-while getgenv().ScaryName == true do
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.R11PNameE11vent:FireServer("RolePlayName", "I SEE YOU")
-game:GetService("ReplicatedStorage").RemoteEvents.R11PNameE11vent:FireServer("RolePlayBio", "YOU CANT HIDE")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.R11PNameE11vent:FireServer("RolePlayName", "DONT RUN LITTLE ONE")
-game:GetService("ReplicatedStorage").RemoteEvents.R11PNameE11vent:FireServer("RolePlayBio", "#####################################################")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.R11PNameE11vent:FireServer("RolePlayName", "YOURE TASTY")
-game:GetService("ReplicatedStorage").RemoteEvents.R11PNameE11vent:FireServer("RolePlayBio", "#####################################################")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.R11PNameE11vent:FireServer("RolePlayName", "COME HERE")
-game:GetService("ReplicatedStorage").RemoteEvents.R11PNameE11vent:FireServer("RolePlayBio", "#####################################################")
-end
-end)
-
-HeadsSec:NewButton("Slender-Heads", "ja slender nhhhhh xdddddddddddd kappa frrrrrrr hzm", function()
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",628771505)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",1744060292)
-end)
