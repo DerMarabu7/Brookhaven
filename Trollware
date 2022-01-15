@@ -110,6 +110,22 @@ Notify({
     });
 end)
 
+OutfitsSec:NewButton("Green Reaper", "reapi meapi", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("skintone","Really black")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",638089422)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",1744060292)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",132809431)
+    wait(0.5)
+    Notify({
+        Description = "Succesfully changed to Green Reaper";
+        Title = "Trollware";
+        Duration = 3;
+        });
+    end)
+
 
 OutfitsSec:NewButton(":)))))))))))", "YEETTTTTTTTTTTTTTTTTT", function()
     game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("skintone","Really black")
@@ -158,10 +174,17 @@ wait(0.5)
 game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",1744060292)
 end)
 
+
+
 HeadsSec:NewButton("Mr. Bling Bling", "Bobux dikka", function()
 wait(0.5)
 game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6443423649)
 end)
+
+HeadsSec:NewButton("Egg of Sheistiny", "Ein Ei", function()
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",153059501)
+end)    
 
 ExtrasSec:NewKeybind("Toggle UI", "Toggles Ui Visibility", Enum.KeyCode.LeftControl, function()
 	Library:ToggleUI()
