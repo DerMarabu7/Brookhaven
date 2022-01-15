@@ -125,6 +125,23 @@ OutfitsSec:NewButton("Green Reaper", "reapi meapi", function()
         Duration = 3;
         });
     end)
+OutfitsSec:NewButton("Killer", "reapi meapi", function()
+        game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("skintone","Really black")
+        wait(0.5)
+        game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",295421229)
+        wait(0.5)
+        game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6570432230)
+        wait(0.5)
+        game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",8261637626)
+        wait(0.5)
+        game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",262669756)
+        wait(0.5)
+        Notify({
+            Description = "Succesfully changed to killer";
+            Title = "Trollware";
+            Duration = 3;
+            });
+end)
 
 OutfitsSec:NewButton("Blue Head Normal", "bleuwuru", function()
 game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("skintone", "Really blue")
@@ -202,6 +219,190 @@ OutfitsSec:NewButton(":)))))))))))", "YEETTTTTTTTTTTTTTTTTT", function()
         Duration = 3;
         });
     end)
+
+OutfitsSec:NewButton("All Heads wtf", "hahahahahahahahahahah", function()
+--Shit ass script made by failedmite57926
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local Character = LocalPlayer.Character
+local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+
+function rm()
+    for i,v in pairs(Character:GetDescendants()) do
+        if v:IsA("BasePart") then
+            if v.Name == "Handle" or v.Name == "Head" then
+                if Character.Head:FindFirstChild("OriginalSize") then
+                    Character.Head.OriginalSize:Destroy()
+                end
+            else
+                for i,cav in pairs(v:GetDescendants()) do
+                    if cav:IsA("Attachment") then
+                        if cav:FindFirstChild("OriginalPosition") then
+                            cav.OriginalPosition:Destroy()  
+                        end
+                    end
+                end
+                v:FindFirstChild("OriginalSize"):Destroy()
+                if v:FindFirstChild("AvatarPartScaleType") then
+                    v:FindFirstChild("AvatarPartScaleType"):Destroy()
+                end
+            end
+        end
+    end
+end
+
+rm()
+
+wait(0.5)
+
+Humanoid:FindFirstChild("BodyProportionScale"):Destroy()
+
+wait(1)
+
+rm()
+
+wait(0.5)
+
+Humanoid:FindFirstChild("BodyHeightScale"):Destroy()
+
+wait(1)
+
+rm()
+
+wait(0.5)
+
+Humanoid:FindFirstChild("BodyWidthScale"):Destroy()
+
+wait(1)
+
+rm()
+
+wait(0.5)
+
+Humanoid:FindFirstChild("BodyDepthScale"):Destroy()
+
+wait(1)
+
+rm()
+
+wait()
+
+wait(0.5)
+
+Humanoid:FindFirstChild("HeadScale"):Destroy()
+
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("skintone","Really black")
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",815140499)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",7781687598)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",1470025165)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",8199693419)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",1474657)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",92719239)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",132809431)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",311450131)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",7871423041)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",173624602)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",173624749)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",1704499641)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6970966434)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6443423649)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",7583389935)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",4739738574)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",233253311)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",7674576391)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",262669756)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",417456127)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",7871454007)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",183468963)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",2413964589)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",173624561)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",1744060292)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",74891470)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",215718515)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",233705354)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",191101707)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",153059501)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",169444515)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6736323621)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",4416812356)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",2470750640)
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.A11vatarOriginalCharacterC11lient:FireServer("OCA")
+wait(1)
+game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",192557913)
+Notify({
+Description = "Please Reset Now, Changed to All Hats";
+Title = "Trollware";
+Duration = 5;
+});
+end)
 
 
 PlayerSec:NewToggle("ScaryName", "YE", function(state)
