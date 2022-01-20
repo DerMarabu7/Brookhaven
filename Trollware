@@ -404,6 +404,19 @@ Duration = 5;
 });
 end)
 
+OutfitsSec:NewButton("Hacker AugenKopf", "wühlmaus", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("skintone", "Really black")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",6358360152)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",82665932)
+    wait(0.5)
+    Notify({
+    Description = "Succesfully changed to Blue Head";
+    Title = "Trollware";
+     Duration = 3;
+    });
+    end)
 
 PlayerSec:NewToggle("ScaryName", "YE", function(state)
     if state then
