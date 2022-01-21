@@ -13,6 +13,7 @@ local TextLabel = Instance.new("TextLabel")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -102,7 +103,7 @@ local function ECJL_fake_script() -- Frame.LocalScript
 	local Box = script.Parent.TextBox
 	Button.MouseButton1Click:Connect(function()
 	wait(1)
-	game:GetService("ReplicatedStorage").RemoteEvents.U11pdateA11vatar:FireServer("wear",tonumber(Box.Text))
+	game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",tonumber(Box.Text))
 	end)
 end
 coroutine.wrap(ECJL_fake_script)()
