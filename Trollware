@@ -1,424 +1,379 @@
-Heckerman = {
-    SchemeColor = Color3.fromRGB(0, 77, 0),
-    Background = Color3.fromRGB(0, 0, 0),
-    Header = Color3.fromRGB(0, 0, 0),
-    TextColor = Color3.fromRGB(255,255,255),
-    ElementColor = Color3.fromRGB(20, 20, 20)
-}
-local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
+-- Imports--
+local TrollwareLib = loadstring(game:HttpGet("https://solarishub.dev/SolarisLib.lua"))()
+local AkaliNotif = loadstring(game:HttpGet(
+    "https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
 local Notify = AkaliNotif.Notify;
-local TargetName = "";
 getgenv().ScaryName = false;
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Trollware", Heckerman)
-local Outfits = Window:NewTab("Outfits")
-local OutfitsSec = Outfits:NewSection("Outfits")
-local Heads = Window:NewTab("Heads")
-local HeadsSec = Heads:NewSection("Heads")
-local Player = Window:NewTab("Player")
-local PlayerSec = Player:NewSection("Player")
-local Misc = Window:NewTab("Misc")
-local MiscSec = Misc:NewSection("Misc")
-local Extras = Window:NewTab("Extras")
-local ExtrasSec = Extras:NewSection("Extras")
+TrollwareLib:Notification("Trollware", "Trollware on Top!")
+local Trollware = TrollwareLib:New({
+    Name = "Trollware",
+    FolderToSave = "Trollware"
+})
 
-OutfitsSec:NewButton("Reset Outfit", "Resets you to your Roblox Outfit", function()
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
-Notify({
-    Description = "Succesfully changed to normal roblox outfit";
-    Title = "Trollware";
-    Duration = 3;
-    });
-end)
-
-OutfitsSec:NewButton("Brollge", "YEE", function()
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",6725974421)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",6725973991)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",6713806832)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",215718515)
-Notify({
-    Description = "Succesfully changed to Brollge";
-    Title = "Trollware";
-    Duration = 3;
-    });
-end)
-
-OutfitsSec:NewButton("AugenKopf", "YEE", function()
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone", "Dark nougat")
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",6135767720)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",6773734422)
-wait(0.5)
-Notify({
-    Description = "Succesfully changed to AugenKopf";
-    Title = "Trollware";
-    Duration = 3;
-    });
-end)
-
-OutfitsSec:NewButton("Ghost Deer", "YEE", function()
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone", "Really black")
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",6352235893)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",7084297385)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",183468963)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",74891470)
-Notify({
-    Description = "Succesfully changed to Ghost Deer";
-    Title = "Trollware";
-    Duration = 3;
-    });
-end)
-
-OutfitsSec:NewButton("Bodybuilder", "YEETTTTTTTTTTTTTTTTTT", function()
-    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone","Light orange")
+-- Gui Building--
+local Outfits = Trollware:Tab("Outfits")
+local Heads = Trollware:Tab("Heads")
+local Player = Trollware:Tab("Player")
+local Misc = Trollware:Tab("Misc")
+local Extras = Trollware:Tab("Extras")
+local OutfitsSection = Outfits:Section("Outfits")
+local HeadsSection = Heads:Section("Heads")
+local PlayerSection = Player:Section("Player")
+local MiscSection = Misc:Section("Misc")
+local ExtrasSection = Extras:Section("Extras")
+------------------------------------------------
+-- Outfits--
+OutfitsSection:Button("Reset Outfit", function()
     wait(0.5)
-    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",7097631761)
-    wait(0.5)
-    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",7484664247)
-    wait(0.5)
-    Notify({
-        Description = "Succesfully changed to Bodybuilder";
-        Title = "Trollware";
-        Duration = 3;
-        });
+    game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
+    TrollwareLib:Notification("Trollware", "Succesfully changed to normal roblox outfit.")
 end)
 
-OutfitsSec:NewButton("Poison", "YEETTTTTTTTTTTTTTTTTT", function()
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone","Really black")
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",64444871)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",1744060292)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",6352235893)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",7084297385)
-Notify({
-    Description = "Succesfully changed to Poison";
-    Title = "Trollware";
-    Duration = 3;
-    });
+OutfitsSection:Button("Brollge", function()
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 6725974421)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 6725973991)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 6713806832)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 215718515)
+    TrollwareLib:Notification("Trollware", "Succesfully changed to Brollge.")
 end)
 
-OutfitsSec:NewButton("Green Reaper", "reapi meapi", function()
-    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone","Really black")
+OutfitsSection:Button("Augenkopf", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone", "Dark nougat")
     wait(0.5)
-    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",638089422)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 6135767720)
     wait(0.5)
-    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",1744060292)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 6773734422)
     wait(0.5)
-    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",132809431)
-    wait(0.5)
-    Notify({
-        Description = "Succesfully changed to Green Reaper";
-        Title = "Trollware";
-        Duration = 3;
-        });
-    end)
-OutfitsSec:NewButton("Killer", "reapi meapi", function()
-        game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone","Really black")
-        wait(0.5)
-        game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",295421229)
-        wait(0.5)
-        game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",6570432230)
-        wait(0.5)
-        game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",8261637626)
-        wait(0.5)
-        game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",262669756)
-        wait(0.5)
-        Notify({
-            Description = "Succesfully changed to killer";
-            Title = "Trollware";
-            Duration = 3;
-            });
+    TrollwareLib:Notification("Trollware", "Succesfully changed to Augenkopf.")
 end)
 
-OutfitsSec:NewButton("Blue Head Normal", "bleuwuru", function()
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone", "Really blue")
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",3810504815)
-wait(0.5)
-Notify({
-Description = "Succesfully changed to Blue Head";
-Title = "Trollware";
- Duration = 3;
-});
+OutfitsSection:Button("Ghost Deer", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone", "Really black")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 6352235893)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 7084297385)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 183468963)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 74891470)
+    TrollwareLib:Notification("Trollware", "Succesfully changed to Ghost Deer.")
 end)
 
-OutfitsSec:NewButton("Blue Head Stars", "bleuwuru", function()
+OutfitsSection:Button("Bodybuilder", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone", "Light orange")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 7097631761)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 7484664247)
+    wait(0.5)
+    TrollwareLib:Notification("Trollware", "Succesfully changed to Bodybuilder.")
+end)
+
+OutfitsSection:Button("Poison", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone", "Really black")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 64444871)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 1744060292)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 6352235893)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 7084297385)
+    TrollwareLib:Notification("Trollware", "Succesfully changed to Poison.")
+end)
+
+OutfitsSection:Button("Green Reaper", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone", "Really black")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 638089422)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 1744060292)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 132809431)
+    wait(0.5)
+    TrollwareLib:Notification("Trollware", "Succesfully changed to Green Reaper.")
+end)
+
+OutfitsSection:Button("Killer", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone", "Really black")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 295421229)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 6570432230)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 8261637626)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 262669756)
+    wait(0.5)
+    TrollwareLib:Notification("Trollware", "Succesfully changed to Killer.")
+end)
+
+OutfitsSection:Button("Blue Head Normal", function()
     game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone", "Really blue")
     wait(0.5)
-    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",3810504815)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 3810504815)
     wait(0.5)
-    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",173624602)
-    Notify({
-    Description = "Succesfully changed to Blue Head";
-    Title = "Trollware";
-     Duration = 3;
-    });
-    end)
-
-    OutfitsSec:NewButton("Blue Head Ring", "bleuwuru", function()
-        game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone", "Really blue")
-        wait(0.5)
-        game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",3810504815)
-        wait(0.5)
-        game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",8151404994)
-        Notify({
-        Description = "Succesfully changed to Blue Head";
-        Title = "Trollware";
-         Duration = 3;
-        });
-        end)
-
-OutfitsSec:NewButton("Weißes Ei", "jajaja", function()
--- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
-
-local ohString1 = "skintone"
-local ohString2 = "Institutional white"
-
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer(ohString1, ohString2)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",173624749)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",192557913)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",153059501)
-wait(0.5)
-Notify({
-Description = "Succesfully changed to Eieieie";
-Title = "Trollware";
-Duration = 3;
-});
+    TrollwareLib:Notification("Trollware", "Succesfully changed to Blue Head Normal.")
 end)
 
-
-OutfitsSec:NewButton(":)))))))))))", "YEETTTTTTTTTTTTTTTTTT", function()
-    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone","Really black")
+OutfitsSection:Button("Blue Head Stars", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone", "Really blue")
     wait(0.5)
-    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",6679358935)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 3810504815)
     wait(0.5)
-    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",6462510191)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 173624602)
+    TrollwareLib:Notification("Trollware", "Succesfully changed to Blue Head Stars.")
+end)
+
+OutfitsSection:Button("Blue Head Ring", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone", "Really blue")
     wait(0.5)
-    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",6239895731)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 3810504815)
     wait(0.5)
-    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",7667210031)
-    Notify({
-        Description = "Succesfully changed to :)))))))))))";
-        Title = "Trollware";
-        Duration = 3;
-        });
-    end)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 8151404994)
+    TrollwareLib:Notification("Trollware", "Succesfully changed to Blue Head Ring.")
+end)
 
-OutfitsSec:NewButton("All Heads wtf", "hahahahahahahahahahah", function()
---Shit ass script made by failedmite57926
+OutfitsSection:Button("Ein Ei", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone", "Institutional white")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 173624749)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 192557913)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 153059501)
+    wait(0.5)
+    TrollwareLib:Notification("Trollware", "Succesfully changed to ein Ei.")
+end)
 
-local LocalPlayer = game:GetService("Players").LocalPlayer
-local Character = LocalPlayer.Character
-local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+OutfitsSection:Button(":)))))))))))", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone", "Really black")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 6679358935)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 6462510191)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 6239895731)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 7667210031)
+    TrollwareLib:Notification("Trollware", "Succesfully changed to :))))))))))).")
+end)
 
-function rm()
-    for i,v in pairs(Character:GetDescendants()) do
-        if v:IsA("BasePart") then
-            if v.Name == "Handle" or v.Name == "Head" then
-                if Character.Head:FindFirstChild("OriginalSize") then
-                    Character.Head.OriginalSize:Destroy()
-                end
-            else
-                for i,cav in pairs(v:GetDescendants()) do
-                    if cav:IsA("Attachment") then
-                        if cav:FindFirstChild("OriginalPosition") then
-                            cav.OriginalPosition:Destroy()  
+OutfitsSection:Button("All Heads", function()
+    -- Shit ass script made by failedmite57926
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local Character = LocalPlayer.Character
+    local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+
+    function rm()
+        for i, v in pairs(Character:GetDescendants()) do
+            if v:IsA("BasePart") then
+                if v.Name == "Handle" or v.Name == "Head" then
+                    if Character.Head:FindFirstChild("OriginalSize") then
+                        Character.Head.OriginalSize:Destroy()
+                    end
+                else
+                    for i, cav in pairs(v:GetDescendants()) do
+                        if cav:IsA("Attachment") then
+                            if cav:FindFirstChild("OriginalPosition") then
+                                cav.OriginalPosition:Destroy()
+                            end
                         end
                     end
-                end
-                v:FindFirstChild("OriginalSize"):Destroy()
-                if v:FindFirstChild("AvatarPartScaleType") then
-                    v:FindFirstChild("AvatarPartScaleType"):Destroy()
+                    v:FindFirstChild("OriginalSize"):Destroy()
+                    if v:FindFirstChild("AvatarPartScaleType") then
+                        v:FindFirstChild("AvatarPartScaleType"):Destroy()
+                    end
                 end
             end
         end
     end
-end
 
-rm()
+    rm()
 
-wait(0.5)
+    wait(0.5)
 
-Humanoid:FindFirstChild("BodyProportionScale"):Destroy()
+    Humanoid:FindFirstChild("BodyProportionScale"):Destroy()
 
-wait(1)
+    wait(1)
 
-rm()
+    rm()
 
-wait(0.5)
+    wait(0.5)
 
-Humanoid:FindFirstChild("BodyHeightScale"):Destroy()
+    Humanoid:FindFirstChild("BodyHeightScale"):Destroy()
 
-wait(1)
+    wait(1)
 
-rm()
+    rm()
 
-wait(0.5)
+    wait(0.5)
 
-Humanoid:FindFirstChild("BodyWidthScale"):Destroy()
+    Humanoid:FindFirstChild("BodyWidthScale"):Destroy()
 
-wait(1)
+    wait(1)
 
-rm()
+    rm()
 
-wait(0.5)
+    wait(0.5)
 
-Humanoid:FindFirstChild("BodyDepthScale"):Destroy()
+    Humanoid:FindFirstChild("BodyDepthScale"):Destroy()
 
-wait(1)
+    wait(1)
 
-rm()
+    rm()
 
-wait()
+    wait()
 
-wait(0.5)
+    wait(0.5)
 
-Humanoid:FindFirstChild("HeadScale"):Destroy()
+    Humanoid:FindFirstChild("HeadScale"):Destroy()
 
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone","Really black")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",815140499)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",7781687598)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",1470025165)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",8199693419)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",1474657)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",92719239)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",132809431)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",313450131)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",7871423041)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",173624602)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",173624749)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",1704499641)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",6970966434)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",6443423649)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",7583389935)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",4739738574)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",233253313)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",7674576391)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",262669756)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",417456127)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",7871454007)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",183468963)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",2413964589)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",173624561)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",1744060292)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",74891470)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",215718515)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",233705354)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",191301707)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",153059501)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",169444515)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",6736323621)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",4416812356)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",2470750640)
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
-wait(1)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",192557913)
-Notify({
-Description = "Please Reset Now, Changed to All Hats";
-Title = "Trollware";
-Duration = 5;
-});
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone", "Really black")
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 815140499)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 7781687598)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 1470025165)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 8199693419)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 1474657)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 92719239)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 132809431)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 313450131)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 7871423041)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 173624602)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 173624749)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 1704499641)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 6970966434)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 6443423649)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 7583389935)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 4739738574)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 233253313)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 7674576391)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 262669756)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 417456127)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 7871454007)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 183468963)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 2413964589)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 173624561)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 1744060292)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 74891470)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 215718515)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 233705354)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 191301707)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 153059501)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 169444515)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 6736323621)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 4416812356)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 2470750640)
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.A13vatarOriginalCharacterC13lient:FireServer("OCA")
+    wait(1)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 192557913)
+    TrollwareLib:Notification("RESET NOW", "Succesfully changed to All Heads.")
 end)
 
-OutfitsSec:NewButton("Hacker AugenKopf", "wühlmaus", function()
+OutfitsSection:Button("Hacker Augenkopf", function()
     game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("skintone", "Really black")
     wait(0.5)
-    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",6358360152)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 6358360152)
     wait(0.5)
-    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",82665932)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 82665932)
     wait(0.5)
-    Notify({
-    Description = "Succesfully changed to Blue Head";
-    Title = "Trollware";
-     Duration = 3;
-    });
-    end)
+    TrollwareLib:Notification("Trollware", "Succesfully changed to Hacker Augenkopf.")
+end)
+-------------------------------------------------------------------------------------------------------------------------
+-- Heads--
+HeadsSection:Button("Slender-Heads", function()
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 628771505)
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 1744060292)
+end)
 
-PlayerSec:NewToggle("ScaryName", "YE", function(state)
+HeadsSection:Button("Mr. Bling Bling", function()
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 6443423649)
+end)
+
+HeadsSection:Button("Egg of Sheistiny", function()
+    wait(0.5)
+    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear", 153059501)
+end)
+--------------------------------------------------------------------------------------------------------------------------
+--Player--
+local toggle = PlayerSection:Toggle("ScaryName", false,"Toggle", function(state)
     if state then
         getgenv().ScaryName = true;
     else
@@ -439,36 +394,3 @@ game:GetService("ReplicatedStorage").RemoteEvents.R13PNameE13vent:FireServer("Ro
 game:GetService("ReplicatedStorage").RemoteEvents.R13PNameE13vent:FireServer("RolePlayBio", "#####################################################")
 end
 end)
-
-HeadsSec:NewButton("Slender-Heads", "ja slender nhhhhh xdddddddddddd kappa frrrrrrr hzm", function()
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",628771505)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",1744060292)
-end)
-
-
-
-HeadsSec:NewButton("Mr. Bling Bling", "Bobux dikka", function()
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",6443423649)
-end)
-
-HeadsSec:NewButton("Egg of Sheistiny", "Ein Ei", function()
-    wait(0.5)
-    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",153059501)
-end)    
-
-ExtrasSec:NewKeybind("Toggle UI", "Toggles Ui Visibility", Enum.KeyCode.LeftControl, function()
-	Library:ToggleUI()
-end)
-
-MiscSec:NewButton("Equip/Unequip trollware banner", "YEE", function()
-    wait(0.5)
-    game:GetService("ReplicatedStorage").RemoteEvents.U13pdateA13vatar:FireServer("wear",4739738574)
-    Notify({
-        Description = "Succesfully equipped/unequipped Trollware Banner!";
-        Title = "Trollware";
-        Duration = 3;
-        });
-    end)
