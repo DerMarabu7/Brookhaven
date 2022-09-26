@@ -1,0 +1,369 @@
+-- Find Remotes Folder
+for i, gay in pairs(game:GetService("ReplicatedStorage"):GetDescendants()) do
+ if gay.Name == "9Q9Agenc9Q9y" then
+    gay.Parent.Name = "Remotes";
+end
+end
+
+--Functions
+function CharAddItem(id)
+game:GetService("ReplicatedStorage").Remotes["9Q9Updat9Q9eAvata9Q9r"]:FireServer("wear", id)
+end
+
+function CharReset()
+game:GetService("ReplicatedStorage").Remotes["9Q9Avata9Q9rOrigina9Q9l"]:FireServer("OCA")
+end
+
+function CharColor(color)
+game:GetService("ReplicatedStorage").Remotes["9Q9Updat9Q9eAvata9Q9r"]:FireServer("skintone", color)
+end
+
+function CharSize(Size)
+game:GetService("ReplicatedStorage").Remotes["9Q9Clothe9Q9s"]:FireServer("CharacterSizeDown", Size)
+end
+
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
+
+local GUI = Mercury:Create{
+    Name = "Trollware Awoken",
+    Size = UDim2.fromOffset(600, 400),
+	Theme = Mercury.Themes.Dark,
+    Link = "https:trollware-awoken.net/script"
+}
+
+local Outfits = GUI:Tab{
+	Name = "Outfits",
+	Icon = "http://www.roblox.com/asset/?id=5078617720"
+}
+
+Outfits:Button{
+	Name = "Reset Outfit",
+	Description = nil,
+	Callback = function() 
+	CharReset()
+	end
+}
+
+Outfits:Button{
+	Name = "Brollge",
+	Description = nil,
+	Callback = function() 
+	CharAddItem(6725974421)
+	wait(1)
+	CharAddItem(6725973991)
+	wait(1)
+	CharAddItem(6711806832)
+	end
+}
+
+Outfits:Button{
+	Name = "Eye Head",
+	Description = nil,
+	Callback = function()
+    CharColor("Dark nougat")
+    wait(1)
+	CharAddItem(6773734422)
+	wait(1)
+	CharAddItem(6844537407)
+	end
+}
+
+Outfits:Button{
+	Name = "Ghost Deer",
+	Description = nil,
+	Callback = function()
+    CharColor("Really black")
+    wait(1)
+	CharAddItem(6352235893)
+	wait(1)
+	CharAddItem(7084297385)
+	wait(1)
+	CharAddItem(183468963)
+	wait(1)
+	CharAddItem(74891470)
+	wait(1)
+	end
+}
+
+Outfits:Button{
+	Name = "Poison",
+	Description = nil,
+	Callback = function()
+    CharColor("Really black")
+    wait(1)
+	CharAddItem(64444871)
+	wait(1)
+	CharAddItem(1744060292)
+	wait(1)
+	CharAddItem(6352235893)
+	wait(1)
+	CharAddItem(7084297385)
+	wait(1)
+	end
+}
+
+Outfits:Button{
+	Name = "Green Reaper",
+	Description = nil,
+	Callback = function()
+    CharColor("Really black")
+    wait(1)
+	CharAddItem(638089422)
+	wait(1)
+	CharAddItem(132809431)
+	wait(1)
+	end
+}
+
+Outfits:Button{
+	Name = "Killer",
+	Description = nil,
+	Callback = function()
+    CharColor("Really black")
+    wait(1)
+	CharAddItem(295421229)
+	wait(1)
+	CharAddItem(6570432230)
+	wait(1)
+	CharAddItem(8261637626)
+	wait(1)
+	CharAddItem(262669756)
+	wait(1)
+	end
+}
+
+Outfits:Button{
+	Name = "Ein Ei",
+	Description = nil,
+	Callback = function()
+    CharColor("Institutional white")
+    wait(1)
+	CharAddItem(173624749)
+	wait(1)
+	CharAddItem(192557916)
+	wait(1)
+	CharAddItem(153059501)
+	wait(1)
+	end
+}
+
+Outfits:Button{
+	Name = "Bodybuilder",
+	Description = nil,
+	Callback = function()
+    CharColor("Light orange")
+    wait(1)
+	CharAddItem(7097631761)
+	wait(1)
+	CharAddItem(7484664247)
+	wait(1)
+	CharAddItem(2393423047)
+	end
+}
+
+Outfits:Button{
+	Name = "Blue Head Normal",
+	Description = nil,
+	Callback = function()
+    CharColor("Really blue")
+    wait(1)
+	CharAddItem(3810504815)
+	wait(1)
+	end
+}
+
+Outfits:Button{
+	Name = "Blue Head Stars",
+	Description = nil,
+	Callback = function()
+    CharColor("Really blue")
+    wait(1)
+	CharAddItem(3810504815)
+	wait(1)
+	CharAddItem(173624602)
+	wait(1)
+	end
+}
+
+Outfits:Button{
+	Name = "All Heads",
+	Description = nil,
+	Callback = function()
+      -- Shit ass script made by failedmite57926
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local Character = LocalPlayer.Character
+    local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+
+    function rm()
+        for i, v in pairs(Character:GetDescendants()) do
+            if v:IsA("BasePart") then
+                if v.Name == "Handle" or v.Name == "Head" then
+                    if Character.Head:FindFirstChild("OriginalSize") then
+                        Character.Head.OriginalSize:Destroy()
+                    end
+                else
+                    for i, cav in pairs(v:GetDescendants()) do
+                        if cav:IsA("Attachment") then
+                            if cav:FindFirstChild("OriginalPosition") then
+                                cav.OriginalPosition:Destroy()
+                            end
+                        end
+                    end
+                    v:FindFirstChild("OriginalSize"):Destroy()
+                    if v:FindFirstChild("AvatarPartScaleType") then
+                        v:FindFirstChild("AvatarPartScaleType"):Destroy()
+                    end
+                end
+            end
+        end
+    end
+
+    rm()
+
+    wait(0.5)
+
+    Humanoid:FindFirstChild("BodyProportionScale"):Destroy()
+
+    wait(1.5)
+
+    rm()
+
+    wait(0.5)
+
+    Humanoid:FindFirstChild("BodyHeightScale"):Destroy()
+
+    wait(1.5)
+
+    rm()
+
+    wait(0.5)
+
+    Humanoid:FindFirstChild("BodyWidthScale"):Destroy()
+
+    wait(1.5)
+
+    rm()
+
+    wait(0.5)
+
+    Humanoid:FindFirstChild("BodyDepthScale"):Destroy()
+
+    wait(1.5)
+
+    rm()
+
+    wait()
+
+    wait(0.5)
+
+    Humanoid:FindFirstChild("HeadScale"):Destroy()
+
+    wait(1.5)
+    CharColor("Really black")
+    wait(1.5)
+    CharAddItem(815140499)
+    wait(1.5)
+    CharAddItem(7781687598)
+    wait(1.5)
+CharReset()
+    wait(1.5)
+    CharAddItem(1470025165)
+    wait(1.5)
+    CharAddItem(8199693419)
+    wait(1.5)
+CharReset()
+    wait(1.5)
+    CharAddItem(1474657)
+    wait(1.5)
+    CharAddItem(92719239)
+    wait(1.5)
+CharReset()
+    wait(1.5)
+    CharAddItem(162809431)
+    wait(1.5)
+    CharAddItem(316450161)
+    wait(1.5)
+CharReset()
+    wait(1.5)
+    CharAddItem(7871423041)
+    wait(1.5)
+    CharAddItem(173624602)
+    wait(1.5)
+CharReset()
+    wait(1.5)
+    CharAddItem(173624749)
+    wait(1.5)
+    CharAddItem(1704499641)
+    wait(1.5)
+CharReset()
+    wait(1.5)
+    CharAddItem(6970966434)
+    wait(1.5)
+    CharAddItem(6443423649)
+    wait(1.5)
+CharReset()
+    wait(1.5)
+    CharAddItem(7583389935)
+    wait(1.5)
+    CharAddItem(4739738574)
+    wait(1.5)
+CharReset()
+    wait(1.5)
+    CharAddItem(233253316)
+    wait(1.5)
+    CharAddItem(7674576391)
+    wait(1.5)
+CharReset()
+    wait(1.5)
+    CharAddItem(262669756)
+    wait(1.5)
+    CharAddItem(417456127)
+    wait(1.5)
+CharReset()
+    wait(1.5)
+    CharAddItem(7871454007)
+    wait(1.5)
+    CharAddItem(183468963)
+    wait(1.5)
+CharReset()
+    wait(1.5)
+    CharAddItem(2416964589)
+    wait(1.5)
+    CharAddItem(173624561)
+    wait(1.5)
+CharReset()
+    wait(1.5)
+    CharAddItem(1744060292)
+    wait(1.5)
+    CharAddItem(74891470)
+    wait(1.5)
+CharReset()
+    wait(1.5)
+    CharAddItem(215718515)
+    wait(1.5)
+    CharAddItem(233705354)
+    wait(1.5)
+CharReset()
+    wait(1.5)
+    CharAddItem(191601707)
+    wait(1.5)
+    CharAddItem(153059501)
+    wait(1.5)
+CharReset()
+    wait(1.5)
+    CharAddItem(169444515)
+    wait(1.5)
+    CharAddItem(6736323621)
+    wait(1.5)
+CharReset()
+    wait(1.5)
+    CharAddItem(4416812356)
+    wait(1.5)
+    CharAddItem(2470750640)
+    wait(1.5)
+CharReset()
+    wait(1.5)
+    CharAddItem(192557916)
+	end
+}
