@@ -173,7 +173,6 @@ Outfits:Button{
     wait(1)
 	CharAddItem(3810504815)
 	wait(1)
-	CharAddItem(10583756584)
 	end
 }
 
@@ -187,7 +186,6 @@ Outfits:Button{
 	wait(1)
 	CharAddItem(173624602)
 	wait(1)
-	CharAddItem(10583756584)
 	end
 }
 
