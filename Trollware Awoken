@@ -1,25 +1,29 @@
--- Find Remotes Folder
-for i, gay in pairs(game:GetService("ReplicatedStorage"):GetDescendants()) do
- if gay.Name == "9Q9Agenc9Q9y" then
-    gay.Parent.Name = "Remotes";
+local ToolPathName = "7A7T7A7ool"
+
+for i, semmel in ipairs(game:GetService("ReplicatedStorage"):GetDescendants()) do
+if semmel:IsA("RemoteFunction") and semmel.Name == ToolPathName then
+    semmel.Parent.Name = "Remotes"
 end
 end
 
---Functions
+local UpdateAvatar = game:GetService("ReplicatedStorage").Remotes["7A7Updat7A7eAvata7A7r"]
+local AvatarOriginal = game:GetService("ReplicatedStorage").Remotes["7A7Avata7A7rOrigina7A7l"]
+local Clothes = game:GetService("ReplicatedStorage").Remotes["7A7Clothe7A7s"]
+
 function CharAddItem(id)
-game:GetService("ReplicatedStorage").Remotes["9Q9Updat9Q9eAvata9Q9r"]:FireServer("wear", id)
+UpdateAvatar:FireServer("wear", id)
 end
-
+    
 function CharReset()
-game:GetService("ReplicatedStorage").Remotes["9Q9Avata9Q9rOrigina9Q9l"]:FireServer("OCA")
+AvatarOriginal:FireServer("OCA")
 end
-
+    
 function CharColor(color)
-game:GetService("ReplicatedStorage").Remotes["9Q9Updat9Q9eAvata9Q9r"]:FireServer("skintone", color)
+UpdateAvatar:FireServer("skintone", color)
 end
-
+    
 function CharSize(Size)
-game:GetService("ReplicatedStorage").Remotes["9Q9Clothe9Q9s"]:FireServer("CharacterSizeDown", Size)
+Clothes:FireServer("CharacterSizeDown", Size)
 end
 
 local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
